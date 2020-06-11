@@ -82,17 +82,17 @@ namespace BinaryTree
                     Value = value;
                 }
 
-                //public Node Min()
-                //{
-                //    if (Left == null)
-                //    {
-                //        return Left;
-                //    }
-                //    else
-                //    {
-
-                //    }
-                //}
+                public Node Min()
+                {
+                    if (Left == null)
+                    {
+                        return this;
+                    }
+                    else
+                    {
+                        return Left.Min();
+                    }
+                }
             }
         }
         
@@ -109,6 +109,7 @@ namespace BinaryTree
             binaryTree.Insert(10, "sadfads43435324");
 
             var find = binaryTree.Find(0);
+            var minimum = binaryTree.Root.Min();
         }
     }
 }
